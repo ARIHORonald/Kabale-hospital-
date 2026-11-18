@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kabale Hospital</title>
+<style>
+:root{--bg:#f6faf9;--surface:#fff;--text:#16302b;--muted:#55706a;--brand:#0b7a6b;--bt:#fff;--accent:#d9480f;--line:#d6e4e0;--soft:#e3f3ef;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1a18;--surface:#15262a;--text:#e6f1ee;--muted:#9bb5ae;--brand:#35c2ad;--bt:#06201b;--accent:#ff8a5c;--line:#26403b;--soft:#173430;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0e1a18;--surface:#15262a;--text:#e6f1ee;--muted:#9bb5ae;--brand:#35c2ad;--bt:#06201b;--accent:#ff8a5c;--line:#26403b;--soft:#173430;color-scheme:dark}
+html{scroll-padding-top:70px}*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.6}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--surface);z-index:30}
+a{color:inherit}.wrap{max-width:1000px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:env(safe-area-inset-top,0px);background:var(--surface);border-bottom:1px solid var(--line);z-index:20}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 20px;max-width:1000px;margin:0 auto;flex-wrap:wrap}
+.logo{font-weight:700;font-size:1.1rem;text-decoration:none;color:var(--brand)}
+nav{display:flex;gap:4px;flex-wrap:wrap;font-size:.9rem}
+nav a{text-decoration:none;color:var(--muted);padding:6px 10px;border-radius:8px}
+nav a.on{background:var(--soft);color:var(--brand);font-weight:600}
+.emergency{background:var(--accent);color:#fff;text-align:center;padding:9px 16px;font-weight:600;font-size:.92rem}
+.view{display:none}.view.show{display:block}
+.hero{padding:56px 0 44px;background:var(--soft)}
+.hero h1,.phead h1{font-size:clamp(1.9rem,6vw,2.8rem);line-height:1.15;margin:0 0 12px}
+.hero p,.phead p{color:var(--muted);max-width:580px;margin:0 0 22px;font-size:1.05rem}
+.phead{padding:40px 0 28px;background:var(--soft)}.phead p{margin:0}
+.btn{display:inline-block;background:var(--brand);color:var(--bt);padding:12px 22px;border-radius:10px;text-decoration:none;font-weight:600;border:0;font-size:1rem;cursor:pointer}
+.btn.alt{background:transparent;color:var(--brand);border:2px solid var(--brand);margin-left:8px}
+section{padding:40px 0}h2{font-size:1.5rem;margin:0 0 8px}.sub{color:var(--muted);margin:0 0 22px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px}
+.card h3{margin:8px 0 6px;font-size:1.05rem}.card p{margin:0;color:var(--muted);font-size:.93rem}.ico{font-size:1.8rem}
+.tag{display:inline-block;font-size:.75rem;background:var(--soft);color:var(--brand);padding:2px 10px;border-radius:99px;font-weight:600}
+.row{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px solid var(--line)}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;text-align:center}
+.stats b{display:block;font-size:1.9rem;color:var(--brand)}.stats span{color:var(--muted);font-size:.9rem}
+ul.l{padding-left:20px;color:var(--muted)}ul.l li{margin:4px 0}
+label{display:block;font-size:.88rem;margin:12px 0 4px;color:var(--muted)}
+input,select,textarea{width:100%;padding:10px 12px;border-radius:8px;border:1px solid var(--line);background:var(--surface);color:var(--text);font:inherit}
+.msg{margin-top:14px;font-weight:600;color:var(--brand)}
+details{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin-bottom:10px}
+summary{cursor:pointer;font-weight:600}details p{color:var(--muted);margin:8px 0 0}
+footer{background:var(--surface);border-top:1px solid var(--line);padding:24px 0;color:var(--muted);font-size:.9rem;text-align:center}
+</style>
+</head>
+<body>
+<header><div class="bar">
+<a class="logo" href="#home">🏥 Kabale Hospital</a>
+<nav id="nav"><a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#departments">Departments</a><a href="#appointment">Appointments</a><a href="#news">News</a><a href="#contact">Contact</a></nav>
+</div></header>
+<div class="emergency">Emergency? Call right away: +256 000 000 000 (24 hours)</div>
+
+<main>
+<!-- HOME -->
+<div class="view" id="v-home">
+<div class="hero"><div class="wrap"><h1>Caring for Kabale and the whole region</h1>
+<p>Quality, affordable and compassionate healthcare for families in Kabale and the surrounding districts.</p>
+<a class="btn" href="#appointment">Book an appointment</a><a class="btn alt" href="#services">Our services</a></div></div>
+<section><div class="wrap"><div class="stats">
+<div><b>24/7</b><span>Emergency care</span></div><div><b>8+</b><span>Departments</span></div><div><b>Mon to Sat</b><span>Outpatient clinics</span></div><div><b>1</b><span>Community, one team</span></div></div></div></section>
+<section style="background:var(--soft)"><div class="wrap"><h2>Quick links</h2><p class="sub">Where would you like to go?</p>
+<div class="grid">
+<a class="card" href="#services" style="text-decoration:none"><div class="ico">🩺</div><h3>Services</h3><p>See everything we offer.</p></a>
+<a class="card" href="#departments" style="text-decoration:none"><div class="ico">🏢</div><h3>Departments</h3><p>Find the right clinic and its hours.</p></a>
+<a class="card" href="#appointment" style="text-decoration:none"><div class="ico">📅</div><h3>Appointments</h3><p>Request a visit online.</p></a>
+<a class="card" href="#news" style="text-decoration:none"><div class="ico">📰</div><h3>News</h3><p>Health tips and announcements.</p></a>
+</div></div></section></div>
+
+<!-- ABOUT -->
+<div class="view" id="v-about">
+<div class="phead"><div class="wrap"><h1>About Kabale Hospital</h1><p>Serving south-western Uganda with trained staff working around the clock.</p></div></div>
+<section><div class="wrap two">
+<div><h2>Our story</h2><p class="sub">Kabale Hospital serves patients from Kabale and neighbouring districts, offering general, specialist and emergency care in one place.</p>
+<h2 style="margin-top:24px">Our mission</h2><p class="sub">To provide safe, timely and respectful healthcare to every patient.</p>
+<h2>Our vision</h2><p class="sub">A healthy, productive community in the Kigezi region.</p></div>
+<div><h2>Our values</h2><ul class="l"><li>Compassion for every patient</li><li>Integrity and accountability</li><li>Teamwork across departments</li><li>Respect for privacy and dignity</li><li>Continuous learning and improvement</li></ul>
+<h2 style="margin-top:24px">Our team</h2><p class="sub">Doctors, clinical officers, nurses, midwives, laboratory technicians, pharmacists and support staff.</p></div>
+</div></section></div>
+
+<!-- SERVICES -->
+<div class="view" id="v-services">
+<div class="phead"><div class="wrap"><h1>Our services</h1><p>Care for every stage of life, from birth to old age.</p></div></div>
+<section><div class="wrap"><div class="grid">
+<div class="card"><div class="ico">🚑</div><h3>Emergency and casualty</h3><p>24-hour care for urgent and life-threatening conditions.</p></div>
+<div class="card"><div class="ico">🧑‍⚕️</div><h3>Outpatient care</h3><p>General consultation, check-ups and follow-ups.</p></div>
+<div class="card"><div class="ico">🛏️</div><h3>Inpatient wards</h3><p>Admission, nursing care and recovery support.</p></div>
+<div class="card"><div class="ico">🤰</div><h3>Maternity</h3><p>Antenatal care, safe delivery and postnatal support.</p></div>
+<div class="card"><div class="ico">👶</div><h3>Child health</h3><p>Newborn care, growth monitoring and immunisation.</p></div>
+<div class="card"><div class="ico">🔬</div><h3>Laboratory</h3><p>Blood tests, malaria tests and other diagnostics.</p></div>
+<div class="card"><div class="ico">💊</div><h3>Pharmacy</h3><p>Prescribed medicines and pharmaceutical advice.</p></div>
+<div class="card"><div class="ico">🔪</div><h3>Surgery</h3><p>Minor and major procedures with post-operative care.</p></div>
+<div class="card"><div class="ico">🩻</div><h3>Imaging</h3><p>X-ray and ultrasound services.</p></div>
+</div></div></section></div>
+
+<!-- DEPARTMENTS -->
+<div class="view" id="v-departments">
+<div class="phead"><div class="wrap"><h1>Departments</h1><p>Open a department to see what it does and when it is available.</p></div></div>
+<section><div class="wrap">
+<details open><summary>Outpatient (OPD) <span class="tag">Mon to Sat</span></summary><p>General consultation, minor treatment and referrals. Monday to Friday 8:00 am to 5:00 pm, Saturday 8:00 am to 1:00 pm.</p></details>
+<details><summary>Emergency and casualty <span class="tag">24 hours</span></summary><p>Open every day, all day. Triage nurses assess each patient on arrival.</p></details>
+<details><summary>Maternity <span class="tag">24 hours</span></summary><p>Antenatal clinic, labour ward and postnatal care for mothers and babies.</p></details>
+<details><summary>Paediatrics <span class="tag">Mon to Fri</span></summary><p>Children's clinic and ward, including immunisation days.</p></details>
+<details><summary>Laboratory and imaging <span class="tag">Mon to Sat</span></summary><p>Diagnostic tests and scans requested by clinicians.</p></details>
+<details><summary>Pharmacy <span class="tag">Mon to Sat</span></summary><p>Dispensing of prescribed medicines.</p></details>
+<details><summary>Surgery <span class="tag">By schedule</span></summary><p>Theatre lists and surgical clinics. Emergency surgery is available at any time.</p></details>
+<details><summary>Dental and eye care <span class="tag">Clinic days</span></summary><p>Routine treatment, screening and referrals.</p></details>
+</div></section></div>
+
+<!-- APPOINTMENT -->
+<div class="view" id="v-appointment">
+<div class="phead"><div class="wrap"><h1>Appointments</h1><p>Send a request and our staff will confirm by phone.</p></div></div>
+<section><div class="wrap two">
+<div><h2>Request a visit</h2>
+<label for="n">Full name</label><input id="n" autocomplete="name">
+<label for="p">Phone number</label><input id="p" type="tel" autocomplete="tel">
+<label for="d">Department</label><select id="d"><option>Outpatient (OPD)</option><option>Maternity</option><option>Paediatrics</option><option>Laboratory</option><option>Dental and eye care</option><option>Surgery</option></select>
+<label for="t">Preferred date</label><input id="t" type="date">
+<label for="m">Reason for visit</label><textarea id="m" rows="3"></textarea>
+<p><button class="btn" type="button" id="go">Send request</button></p><div class="msg" id="msg" role="status"></div></div>
+<div><h2>What to bring</h2><ul class="l"><li>National ID or other identification</li><li>Previous medical records or referral letters</li><li>A list of medicines you are taking</li><li>Insurance or payment details, if any</li></ul>
+<h2 style="margin-top:24px">Visiting hours</h2><div class="row"><span>Daily</span><strong>4:00 pm to 6:00 pm</strong></div></div>
+</div></section></div>
+
+<!-- NEWS -->
+<div class="view" id="v-news">
+<div class="phead"><div class="wrap"><h1>News and health tips</h1><p>Announcements and advice for the community. Sample entries, to be replaced.</p></div></div>
+<section><div class="wrap"><div class="grid">
+<div class="card"><span class="tag">Announcement</span><h3>Free community health camp</h3><p>Screening for blood pressure, diabetes and malaria. Date and venue to be confirmed.</p></div>
+<div class="card"><span class="tag">Health tip</span><h3>Wash your hands often</h3><p>Clean hands with soap and water prevent many common infections.</p></div>
+<div class="card"><span class="tag">Health tip</span><h3>Sleep under a treated net</h3><p>Mosquito nets reduce the risk of malaria, especially for children and pregnant mothers.</p></div>
+<div class="card"><span class="tag">Reminder</span><h3>Child immunisation days</h3><p>Bring your child's health card to the paediatric clinic.</p></div>
+</div></div></section></div>
+
+<!-- CONTACT -->
+<div class="view" id="v-contact">
+<div class="phead"><div class="wrap"><h1>Contact us</h1><p>We are here to help.</p></div></div>
+<section><div class="wrap"><div class="grid">
+<div class="card"><div class="ico">📞</div><h3>Phone</h3><p>+256 000 000 000</p></div>
+<div class="card"><div class="ico">🚑</div><h3>Emergency line</h3><p>+256 000 000 000 (24 hours)</p></div>
+<div class="card"><div class="ico">✉️</div><h3>Email</h3><p>info@kabalehospital.example</p></div>
+<div class="card"><div class="ico">📍</div><h3>Location</h3><p>Kabale Municipality, Kigezi region, Uganda</p></div>
+</div></div></section></div>
+</main>
+
+<footer><div class="wrap">© 2026 Kabale Hospital. All rights reserved.</div></footer>
+
+<script>
+var views=["home","about","services","departments","appointment","news","contact"];
+function route(){var h=(location.hash||"#home").slice(1);if(views.indexOf(h)<0)h="home";
+views.forEach(function(v){document.getElementById("v-"+v).classList.toggle("show",v===h)});
+document.querySelectorAll("#nav a").forEach(function(a){a.classList.toggle("on",a.getAttribute("href")==="#"+h)});
+window.scrollTo(0,0)}
+window.addEventListener("hashchange",route);route();
+document.getElementById("go").addEventListener("click",function(){
+var n=document.getElementById("n").value.trim(),p=document.getElementById("p").value.trim(),o=document.getElementById("msg");
+if(!n||!p){o.style.color="var(--accent)";o.textContent="Please enter your name and phone number.";return}
+o.style.color="var(--brand)";o.textContent="Thank you, "+n+". Your request has been noted. Please call the hospital to confirm your slot."});
+</script>
+</body>
+</html>
